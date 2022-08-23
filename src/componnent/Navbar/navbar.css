@@ -1,0 +1,80 @@
+.main{
+    display: flex;
+  flex-direction: row;
+  padding-left: 20px;
+  background-color: #333545;
+  gap:20px;
+}
+.image_logo{
+    margin-left: 200px;
+    padding-top: 10px;
+    width: 250px;
+    height: 80px;
+    padding-bottom: 10px;
+}
+
+.filter
+{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+
+
+.content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    margin-top: 20px;
+}
+
+.search{
+    display: flex;
+    flex-direction: column;
+}
+
+.main2{
+    background-color: #EDEDED80;
+     text-align: center;
+    height: 100px;
+    padding-top: 50px;
+}
+
+.main2 button{
+    border-style: hidden;
+    position: fixed;
+    left: 20px;
+    top:20px
+}
+
+.main2 input{
+    height: 40px;
+    width: 700px;
+    border: 0cm;
+}
+
+.Input{
+  padding-top: 20px;
+}
+.Input input{
+    height: 50px;
+    width: 500px;
+    font-size: large;
+    border-radius: 10px;
+}
+
+.Option{
+    margin-left: 300px;
+    margin-top: 20px;
+}
+.Option select{
+    height: 50px;
+    width:150px;
+    font-size: medium;
+}

@@ -1,0 +1,23 @@
+.slider{
+    display: flex;
+    flex-direction: row;
+ /* max-width: 1000px;  */
+    position: relative;
+    background-color: aqua;
+    align-items: center;
+    justify-content: center;
+}
+.mySlides img{
+    padding: 5px 5px;
+    border-radius: 10px;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
