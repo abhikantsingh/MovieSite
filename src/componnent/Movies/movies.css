@@ -1,0 +1,64 @@
+.movieData{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:60px;
+}
+
+.Main{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.Main h13{
+    font-style: inherit;
+    font-size: 24px;
+    font-family: Roboto;
+    color: #333333;
+}
+
+.internal img{
+    height:400px;
+    width: 220px;
+    border-radius: 10px;
+}
+
+.midware{
+    margin: 20px 20px;
+}
+
+.fitstyle{
+ margin: 20px 20px;
+}
+
+.fitstyle img{
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+}
+.primeTime{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.Main2{
+    background-color: #2B3148;
+}
+
+.primeTime img{
+    height:300px;
+    width: 200px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.Premier{
+    background-color: #2B3148;
+    /* margin: 30px 30px; */
+}

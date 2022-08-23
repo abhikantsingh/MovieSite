@@ -6,6 +6,7 @@
     background-color: aqua;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
 }
 .mySlides img{
     padding: 5px 5px;

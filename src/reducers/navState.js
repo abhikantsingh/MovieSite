@@ -6,7 +6,7 @@ export const counterSlice = createSlice({
     initialState:{
         value:true,
     },
-    reducer:{
+    reducers:{
         changeBool: (state) =>{
             state.value=(!state.value)
         }
