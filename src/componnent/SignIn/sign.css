@@ -1,0 +1,46 @@
+.MainSign{
+  display: flex;
+  flex-direction: row;
+}
+
+.inputField{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.inputField input{
+    border: 2px solid red;
+    border-radius: 4px;
+}
+
+/* .signimage{
+   width: 600px;
+    height: 100vh;
+   
+} */
+
+.maininput{
+    margin: 250px 260px;
+   padding: 40px 40px;
+}
+
+.signimage img{
+    width: 120vh;
+    height: 100vh;
+}
+
+.inputField button{
+    background-color:#0a0a23;
+    color: #fff;
+    border:none; 
+    border-radius:10px; 
+    padding:15px;
+    min-height:30px; 
+    min-width: 120px;
+}
+
+.inputField button:hover{
+    background-color:#002ead;
+    transition: 0.7s;
+}

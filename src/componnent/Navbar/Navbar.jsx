@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import "../../componnent/Navbar/navbar.css";
 import Searchs from "./Search.jsx"
 import { useSelector , useDispatch} from 'react-redux'
 import {changeBool} from "../../reducers/navState";
+import { Outlet, Link } from "react-router-dom";
 
 const Navbar = ({handelShow}) => {
   const data = useSelector((state) => state.navBar.value);
   const dispatch = useDispatch();
   const [Search, setSearch] = useState(true);
+  const [show,setShow] = useState(true);
+  const [isLog,setIsLog] =useState(true);
   const handelChange = () =>
   {
     setSearch(!Search);
@@ -17,15 +20,33 @@ const Navbar = ({handelShow}) => {
     return <h1>hello</h1>
   }
 
+  const handelLocal = () =>{
+    console.log("i am here");
+    localStorage.setItem('name',"");
+    // console.log(localStorage.getItem('name'));
+     setIsLog(!isLog);
+  }
+
+   useEffect(() =>{
+      if(localStorage.getItem('name')!==null)
+      setIsLog(false)
+      else
+      setIsLog(true)
+   },[]);
+
+  
+
   return (
     <>
       {Search ? (
         <div className="main">
-          <img
+         <Link to={"/"}>
+         <img
             className="image_logo"
             src={require("../../assets/images/Book.jpeg")}
             alt="logo"
           ></img>
+         </Link>
           <div className="Input">
             <input type="text" placeholder="Search..."></input>
             <button onClick={() => {handelChange() ; dispatch(changeBool())}}  style={{ height: "50px" }} >
@@ -40,7 +61,9 @@ const Navbar = ({handelShow}) => {
               <option>chennai</option>
             </select>
           </div>
+          {isLog ? (<Link to="/auth">
           <button
+          onClick={() => {setShow(!show)}}
             style={{
               width: "100px",
               height: "50px",
@@ -52,6 +75,23 @@ const Navbar = ({handelShow}) => {
           >
             Sign In
           </button>
+          </Link>) :
+          (
+          <>
+          <p style={{fontFamily:"initial",color:"GrayText",fontSize:"24px"}}>{localStorage.getItem('name')}</p>
+          <button
+          onClick={handelLocal}
+           style={{
+            width: "100px",
+            height: "50px",
+            marginTop: "20px",
+            color: "white",
+            backgroundColor: "#F84464",
+            borderRadius:"10px",
+          }}
+          >logout</button>
+          </>
+          )}
         </div>
       ) : (
          <Searchs handelChange={handelChange}></Searchs>

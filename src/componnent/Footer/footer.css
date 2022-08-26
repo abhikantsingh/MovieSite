@@ -1,0 +1,10 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+  background-color: #333545;
+  text-align: center;
+}
+.footer1 p{
+    color: aliceblue;
+    font-size: small;
+}
