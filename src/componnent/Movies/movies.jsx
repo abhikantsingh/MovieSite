@@ -59,7 +59,7 @@ const Movies = () => {
       <div className="movieData">
           {movies.map((movie,idx) => {
           return (
-          <Link to={"/buy/?id=${movie.review}"}>
+          <Link to={"/buy"} state={{url:movie.imgSrc,review:movie.review,name:movie.name}}>
           <div className="internal">
              <img src={require(`../../${movie.imgSrc}.avif`)} alt="" />
               <p>{movie.name}</p>

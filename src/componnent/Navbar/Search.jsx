@@ -41,7 +41,7 @@ const Search = ({ handelChange }) => {
   return (
     <div className="Search">
       <div className="main2">
-        <input placeholder="Search for movie,Events,Plays and Activities"></input>
+        <input readonly="readonly" placeholder="Search for movie,Events,Plays and Activities"></input>
         <button
           onClick={() => {
             handelChange();

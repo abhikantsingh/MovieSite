@@ -48,10 +48,8 @@ const Navbar = ({handelShow}) => {
           ></img>
          </Link>
           <div className="Input">
-            <input type="text" placeholder="Search..."></input>
-            <button onClick={() => {handelChange() ; dispatch(changeBool())}}  style={{ height: "50px" }} >
-              submit
-            </button>
+            <input onClick={() => {handelChange() ; dispatch(changeBool())}} readonly="readonly" type="text" placeholder="Search..."></input>
+           
           </div>
           <div className="Option">
             <select>
@@ -78,7 +76,6 @@ const Navbar = ({handelShow}) => {
           </Link>) :
           (
           <>
-          <p style={{fontFamily:"initial",color:"GrayText",fontSize:"24px"}}>{localStorage.getItem('name')}</p>
           <button
           onClick={handelLocal}
            style={{
