@@ -42,6 +42,7 @@
   gap: 20px;
 }
 
+
 .details input{
   padding: 10px;
 }
@@ -61,11 +62,15 @@
   
   /* Modal Content/Box */
   .modal-content {
-    background-color: #fefefe;
+    color:white;
+    background-color: #1F2533;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
+  }
+  .modal-content input{
+    border-radius: 10px;
   }
   
   /* The Close Button */
