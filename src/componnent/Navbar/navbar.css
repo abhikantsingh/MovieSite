@@ -4,6 +4,7 @@
   /* padding-right: 20px; */
   background-color: #333545;
   gap:20px;
+  overflow: hidden;
 }
 .image_logo{
     margin-left: 200px;
