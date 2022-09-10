@@ -1,7 +1,7 @@
 .main{
     display: flex;
   flex-direction: row;
-  padding-left: 20px;
+  padding-right: 20px;
   background-color: #333545;
   gap:20px;
 }
@@ -70,7 +70,7 @@
 }
 
 .Option{
-    margin-left: 300px;
+    margin-left: 200px;
     margin-top: 20px;
 }
 .Option select{

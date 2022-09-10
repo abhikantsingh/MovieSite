@@ -1,26 +1,28 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Slider.css";
 
 const Slider = () => {
-  let slideIndex = 0;
+   var slideIndex = 0;
+
+   useEffect(() => {
+    showSlides();
+  }, []);
 
   const showSlides = () => {
     let i;
     let slides = document.getElementsByClassName("mySlides");
     for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "inline-block";
+      slides[i].style.display = "none";
+      //  slides[(i)%slides.length].style.display = "inline-block";
     }
-    slideIndex++;
-
-    if (slideIndex > slides.length) {
-      slideIndex = 1;
-    }
-    // slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
+     slideIndex++;
+     console.log((slideIndex-1)%slides.length);
+       slides[(slideIndex-1)%slides.length].style.display ="inline";
+    setTimeout(showSlides, 3000); // Change image every 2 seconds
   };
 
   return (
-    <div onLoad={showSlides} className="slider">
+    <div  className="slider">
       <div className="mySlides fade">
         <img
           src={require("../../assets/images/1658744889327_movie_web.avif")}

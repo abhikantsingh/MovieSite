@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-import buypage from "../buyPage/buypage.css"
+import buypage from "./buypage.css"
 import { useSearchParams } from 'react-router-dom';
 import Model from "./model";
 import {useLocation} from 'react-router-dom';

@@ -1,4 +1,4 @@
-import "../SignIn/sign.css"
+import "./sign.css"
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {signupUser ,loginUser} from "../../reducers/authReducer";
@@ -69,7 +69,7 @@ const submit = () =>{
         <div className="MainSign">
            <div className="maininput">
             {show ? 
-            <><h1>SIGN IN</h1>
+            <><h1>SIGN UP</h1>
             <div className="inputField">
                 <label>Name:</label>
                 <input style={{padding:"10px 10px"}} name='username' onChange={handelChange} type="text" />
@@ -78,17 +78,17 @@ const submit = () =>{
                 <label>Password:</label>
                 <input style={{padding:"10px 10px"}} name='password' onChange={handelChange} type="password" />
                 <button onClick={() => {submit()}} style={{borderRadius:"5px",boxShadow:"initial",padding:"10px 10px"}}>SUBMIT</button>
-                <p>Not a user... <button onClick={() => {setShow(!show)}}>SIGN UP</button></p>
+                <p>Already a user... <button onClick={() => {setShow(!show)}}>SIGN UP</button></p>
             </div></> :
             <>
-            <h1>SIGN UP</h1>
+            <h1>SIGN IN</h1>
             <div className="inputField">
                 <label>EmailID:</label>
                 <input name='email' onChange={handelLchange} type="text" />
                 <label>Password:</label>
                 <input name='password' onChange={handelLchange} type="password" />
                 <button onClick={() => {submitLog()}} style={{borderRadius:"5px",boxShadow:"initial"}}>SUBMIT</button>
-                <p>Already a user... <button onClick={() => {setShow(!show)}}>SIGN IN</button></p>
+                <p>Not a user... <button onClick={() => {setShow(!show)}}>SIGN IN</button></p>
             </div></>
             }
             

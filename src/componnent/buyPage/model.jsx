@@ -1,4 +1,4 @@
-import "../buyPage/buypage.css";
+import "./buypage.css";
 import StripeCheckout from "react-stripe-checkout";
 import { useEffect, useState } from "react";
 import axios from "axios";

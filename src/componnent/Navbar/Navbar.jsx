@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import "../../componnent/Navbar/navbar.css";
+import "./navbar.css";
 import Searchs from "./Search.jsx"
 import { useSelector , useDispatch} from 'react-redux'
 import {changeBool} from "../../reducers/navState";
