@@ -61,7 +61,7 @@ const Movies = () => {
           return (
           <Link to={"/buy"} state={{url:movie.imgSrc,review:movie.review,name:movie.name}}>
           <div className="internal">
-             <img src={require(`../../${movie.imgSrc}.avif`)} alt="" />
+             <img src={require(`../../${movie.imgSrc}.avif`)} alt="Moviesimg..." />
               <p>{movie.name}</p>
             </div>
           </Link>

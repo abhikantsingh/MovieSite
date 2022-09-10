@@ -14,13 +14,13 @@ const English = () => {
       
     return(
         <div>
-        <h13>ENGLISH</h13>
-        <br></br>
+        <p>ENGLISH</p>
+
         {English.map((movies) => {
           return (
             <>
-              <h16 style={{font :"12px Roboto,san-serif",margin:""}}>{movies}</h16>
-              <br></br>
+              <p style={{font :"12px Roboto,san-serif",margin:"0"}}>{movies}</p>
+         
             </>
           );
         })}

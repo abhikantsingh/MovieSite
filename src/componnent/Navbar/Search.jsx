@@ -7,11 +7,30 @@ import Telugu from "./Telugu";
 import Tamil from "./Tamil";
 import { useSelector, useDispatch } from "react-redux";
 import { changeBool } from "../../reducers/navState";
+import { useEffect } from "react";
+// import { useDispatch,useSelector } from "react-redux";
+import { unwrapResult } from "@reduxjs/toolkit";
+import { movieData } from "../../reducers/movieReducer";
 
-const Search = ({ handelChange }) => {
+const Search = ({ handelChange , Movies}) => {
   const data = useSelector((state) => state.navBar.value);
   const dispatch = useDispatch();
-
+  const [filter,setFilter]=useState([]);
+ 
+  useEffect (() =>{
+RenderData();
+  },[]);
+  
+  const RenderData = () =>{
+    dispatch(movieData()).then(
+      unwrapResult
+    ).then((res) =>{
+         setFilter(res.data.data);
+    }).catch((error) =>{
+      console.log(error);
+    })
+  }
+  // console.log(filter);
   const [movies, setMovies] = useState([
     {
       Id: "Hindi",
@@ -63,7 +82,7 @@ const Search = ({ handelChange }) => {
         Select the language of the movie you want to watch.......
       </div>
       <div className="content">
-        {hindi ? <Hindi></Hindi> : ""}
+        {hindi ? <Hindi data={filter} handelChange={handelChange}></Hindi> : ""}
         {english ? <English></English> : ""}
         {tamil ? <Tamil></Tamil> : ""}
         {telugu ? <Telugu></Telugu> : ""}

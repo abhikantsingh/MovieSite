@@ -10,13 +10,11 @@ const Telugu = () =>{
      
     return(
         <div>
-        <h13>TELUGU</h13>
-        <br></br>
+        <p>TELUGU</p>
         {Hindi.map((movies) => {
           return (
             <>
-              <h16 style={{font :"12px Roboto,san-serif"}}>{movies}</h16>
-              <br></br>
+              <p style={{font :"12px Roboto,san-serif",margin:"0"}}>{movies}</p>
             </>
           );
         })}

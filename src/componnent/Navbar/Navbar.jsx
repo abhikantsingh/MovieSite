@@ -5,6 +5,10 @@ import Searchs from "./Search.jsx"
 import { useSelector , useDispatch} from 'react-redux'
 import {changeBool} from "../../reducers/navState";
 import { Outlet, Link } from "react-router-dom";
+// import { useDispatch,useSelector } from "react-redux";
+import { unwrapResult } from "@reduxjs/toolkit";
+import { movieData } from "../../reducers/movieReducer";
+
 
 const Navbar = ({handelShow}) => {
   const data = useSelector((state) => state.navBar.value);
@@ -19,7 +23,7 @@ const Navbar = ({handelShow}) => {
   const fuck = () =>{
     return <h1>hello</h1>
   }
-
+  
   const handelLocal = () =>{
     console.log("i am here");
     localStorage.setItem('name',"");
