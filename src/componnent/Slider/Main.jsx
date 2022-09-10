@@ -13,11 +13,20 @@ const Slider = () => {
     let slides = document.getElementsByClassName("mySlides");
     for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
-      //  slides[(i)%slides.length].style.display = "inline-block";
     }
      slideIndex++;
-     console.log((slideIndex-1)%slides.length);
-       slides[(slideIndex-1)%slides.length].style.display ="inline";
+     if(slideIndex==1)
+      slides[(slides.length-1)%slides.length].style.display = "block";
+      else
+      slides[(slideIndex-2)%slides.length].style.display = "block";
+
+       slides[(slideIndex-1)%slides.length].style.display ="inline-block";
+
+         if(slideIndex==slides.length)
+         slides[1].style.display = "block";
+         else
+          slides[(slideIndex+1)%slides.length].style.display = "block";
+
     setTimeout(showSlides, 3000); // Change image every 2 seconds
   };
 
