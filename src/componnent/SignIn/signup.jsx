@@ -78,7 +78,7 @@ const submit = () =>{
                 <label>Password:</label>
                 <input style={{padding:"10px 10px"}} name='password' onChange={handelChange} type="password" />
                 <button onClick={() => {submit()}} style={{borderRadius:"5px",boxShadow:"initial",padding:"10px 10px"}}>SUBMIT</button>
-                <p>Already a user... <button onClick={() => {setShow(!show)}}>SIGN UP</button></p>
+                <p>Already a user... <button onClick={() => {setShow(!show)}}>SIGN IN</button></p>
             </div></> :
             <>
             <h1>SIGN IN</h1>
@@ -88,7 +88,7 @@ const submit = () =>{
                 <label>Password:</label>
                 <input name='password' onChange={handelLchange} type="password" />
                 <button onClick={() => {submitLog()}} style={{borderRadius:"5px",boxShadow:"initial"}}>SUBMIT</button>
-                <p>Not a user... <button onClick={() => {setShow(!show)}}>SIGN IN</button></p>
+                <p>Not a user... <button onClick={() => {setShow(!show)}}>SIGN UP</button></p>
             </div></>
             }
             

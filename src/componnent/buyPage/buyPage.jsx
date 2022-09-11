@@ -27,8 +27,8 @@ const BuyPage = () => {
             <img src={require(`../../${location.state.url}.avif`)}></img>
           </div>
           <div className="text">
-            <h1>{location.state.name}</h1>
-            <h10>{location.state.review}</h10>
+            <h1 style={{color:"white"}}>{location.state.name}</h1>
+            <p style={{color:"white"}}>{location.state.review}</p>
             <button onClick={handelChange}>BUY TICKET</button>
              {show ? <Model handelChange={handelChange}></Model> : ""} 
          

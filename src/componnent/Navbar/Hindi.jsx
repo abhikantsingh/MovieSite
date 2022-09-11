@@ -17,7 +17,7 @@ const Hindi = ({data , handelChange}) =>{
         {Hindi.map((movie) => {
           return (
             <>
-               <Link to={"/buy"}  onClick={() => {
+               <Link style={{textDecoration:"none",color:"black"}} to={"/buy"}  onClick={() => {
             handelChange();
              dispatch(changeBool());
           }} state={{url:movie.imgSrc,review:movie.review,name:movie.name}}>
